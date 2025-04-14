@@ -1,0 +1,489 @@
+{
+  "resourceType": "Bundle",
+  "id": "BundleReferenciarEjemplo",
+  "meta": {
+    "profile": [
+      "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/BundleReferenciarLE"
+    ]
+  },
+  "type": "message",
+  "timestamp": "2024-01-18T16:00:00-03:00",
+  "entry": [
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/MessageHeader/MesssageHeaderReferenciar",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "id": "MesssageHeaderReferenciar",
+        "meta": {
+          "lastUpdated": "2024-01-18T16:00:00-03:00",
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/MessageHeaderLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_MesssageHeaderReferenciar\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader MesssageHeaderReferenciar</b></p><a name=\"MesssageHeaderReferenciar\"> </a><a name=\"hcMesssageHeaderReferenciar\"> </a><a name=\"MesssageHeaderReferenciar-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-01-18 16:00:00-0300</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MessageHeaderLE.html\">MessageHeader LE</a></p></div><p><b>event</b>: <a href=\"CodeSystem-CSTipoEventoLE.html#CSTipoEventoLE-referenciar\">Tipo de Evento referenciar</a>: Referenciar</p><p><b>author</b>: <a href=\"Bundle-BundleReferenciarEjemplo.html#PractitionerRole_PractitionerRoleReferenciador\">Bundle: type = message; timestamp = 2024-01-18 16:00:00-0300</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Software</b></td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td>SISMaule</td><td>llp:10.11.12.13:5432</td></tr></table><p><b>focus</b>: <a href=\"Bundle-BundleReferenciarEjemplo.html#ServiceRequest_SolicitudInterconsultaEjemplo2\">Bundle: type = message; timestamp = 2024-01-18 16:00:00-0300</a></p></div>"
+        },
+        "eventCoding": {
+          "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSTipoEventoLE",
+          "code": "referenciar",
+          "display": "Referenciar"
+        },
+        "author": {
+          "reference": "PractitionerRole/PractitionerRoleReferenciador"
+        },
+        "source": {
+          "software": "SISMaule",
+          "endpoint": "llp:10.11.12.13:5432"
+        },
+        "focus": [
+          {
+            "reference": "ServiceRequest/SolicitudInterconsultaEjemplo2"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/ServiceRequest/SolicitudInterconsultaEjemplo2",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "SolicitudInterconsultaEjemplo2",
+        "meta": {
+          "versionId": "2.0",
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ServiceRequestLE"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_SolicitudInterconsultaEjemplo2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest SolicitudInterconsultaEjemplo2</b></p><a name=\"SolicitudInterconsultaEjemplo2\"> </a><a name=\"hcSolicitudInterconsultaEjemplo2\"> </a><a name=\"SolicitudInterconsultaEjemplo2-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2.0</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ServiceRequestLE.html\">ServiceRequest LE</a></p></div><p><b>ExtBool Requiere Examen</b>: true</p><p><b>ExtBool Resolutividad APS</b>: true</p><p><b>Origen Interconsulta</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSorigenInterconsulta 1}\">APS</span></p><p><b>Estado Interconsulta Codigo</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEstadoInterconsulta 2}\">A la espera de revisión</span></p><p><b>Especialidad Médica Destino Código</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed 30}\">MEDICINA INTERNA</span></p><p><b>SubEspecialidad Médica Destino Código</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed 14}\">ENDOCRINOLOGÍA ADULTO</span></p><p><b>identifier</b>: 123</p><p><b>status</b>: Draft</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSModalidadAtencionCodigo 1}\">Presencial</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 103696004}\">Interconsulta para atención presencial</span></p><p><b>subject</b>: <a href=\"Patient-EjemploPatientLE.html\">María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>encounter</b>: <a href=\"Encounter-EncounterIniciarEjemplo.html\">Encounter: extension = Derivación; identifier = http://example.org/sampleencounter-identifier#123\u00a0(use:\u00a0official,\u00a0); status = finished; class = Presencial (Modalidad Atencion Codigo#1); period = 2024-01-17 16:00:00+1000 --&gt; 2024-01-17 16:30:00+1000</a></p><p><b>authoredOn</b>: 2024-12-10 09:00:00+0000</p><p><b>requester</b>: <a href=\"PractitionerRole-PractitionerRoleIniciador.html\">PractitionerRole Iniciador</a></p><p><b>performer</b>: <a href=\"Bundle-BundleReferenciarEjemplo.html#PractitionerRole_PractitionerRoleAtendedor1\">Bundle: type = message; timestamp = 2024-01-18 16:00:00-0300</a></p><p><b>locationCode</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSDestinoReferenciaCodigo 1}\">Nivel Secundario</span></p><p><b>reasonCode</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSDerivadoParaCodigo 1}\">Confirmación</span></p><p><b>supportingInfo</b>: </p><ul><li><a href=\"Condition-ConditionInicialEjemplo.html\">Condition Adrenal antibody detected</a></li><li><a href=\"AllergyIntolerance-AllergyIntoleranceExample.html\">AllergyIntolerance Cashew nuts</a></li><li><a href=\"Observation-IndiceConmorbilidadEjemplo.html\">Observation Estrategia de cuidado integral centrado en las personas</a></li><li><a href=\"Observation-EjemploObservationCuidador.html\">Observation Caregiver for person with age-related complaints, chronic diseases or frailty</a></li><li><a href=\"Observation-EjemploObservationDiscapacidadLE.html\">Observation Disability status</a></li><li><a href=\"QuestionnaireResponse-MotivoDerivacionEjemplo.html\">Response to Questionnaire '-&gt;Motivo de Derivación' about '-&gt;María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))'</a></li><li><a href=\"ServiceRequest-EjemploSolicitudExamen.html\">ServiceRequest Prostate specific Ag [Mass/volume] in Serum or Plasma</a></li><li><a href=\"Observation-AnticuerpoAdrenal.html\">Observation Adrenal Ab [Units/volume] in Serum</a></li></ul></div>"
+        },
+        "extension": [
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionBoolRequiereExamen",
+            "valueBoolean": true
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionBoolResolutividadAPS",
+            "valueBoolean": true
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionOrigenInterconsulta",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSorigenInterconsulta",
+                  "code": "1",
+                  "display": "APS"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionEstadoInterconsultaCodigoLE",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEstadoInterconsulta",
+                  "code": "2",
+                  "display": "A la espera de revisión"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionEspecialidadMedicaDestinoCodigo",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed",
+                  "code": "30",
+                  "display": "MEDICINA INTERNA"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionSubEspecialidadMedicaDestinoCodigo",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed",
+                  "code": "14",
+                  "display": "ENDOCRINOLOGÍA ADULTO"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "value": "123"
+          }
+        ],
+        "status": "draft",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSModalidadAtencionCodigo",
+                "code": "1",
+                "display": "Presencial"
+              }
+            ]
+          }
+        ],
+        "priority": "routine",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "103696004"
+            }
+          ],
+          "text": "Interconsulta para atención presencial"
+        },
+        "subject": {
+          "reference": "Patient/EjemploPatientLE"
+        },
+        "encounter": {
+          "reference": "Encounter/EncounterIniciarEjemplo"
+        },
+        "authoredOn": "2024-12-10T09:00:00Z",
+        "requester": {
+          "reference": "PractitionerRole/PractitionerRoleIniciador"
+        },
+        "performer": [
+          {
+            "reference": "PractitionerRole/PractitionerRoleAtendedor1"
+          }
+        ],
+        "locationCode": [
+          {
+            "coding": [
+              {
+                "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSDestinoReferenciaCodigo",
+                "code": "1",
+                "display": "Nivel Secundario"
+              }
+            ]
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSDerivadoParaCodigo",
+                "code": "1",
+                "display": "Confirmación"
+              }
+            ]
+          }
+        ],
+        "supportingInfo": [
+          {
+            "reference": "Condition/ConditionInicialEjemplo"
+          },
+          {
+            "reference": "AllergyIntolerance/AllergyIntoleranceExample"
+          },
+          {
+            "reference": "Observation/IndiceConmorbilidadEjemplo"
+          },
+          {
+            "reference": "Observation/EjemploObservationCuidador"
+          },
+          {
+            "reference": "Observation/EjemploObservationDiscapacidadLE"
+          },
+          {
+            "reference": "QuestionnaireResponse/MotivoDerivacionEjemplo"
+          },
+          {
+            "reference": "ServiceRequest/EjemploSolicitudExamen"
+          },
+          {
+            "reference": "Observation/AnticuerpoAdrenal"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/Practitioner/PractitionerProfesionalLEEjemplo",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "PractitionerProfesionalLEEjemplo",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/PractitionerProfesionalLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_PractitionerProfesionalLEEjemplo\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner PractitionerProfesionalLEEjemplo</b></p><a name=\"PractitionerProfesionalLEEjemplo\"> </a><a name=\"hcPractitionerProfesionalLEEjemplo\"> </a><a name=\"PractitionerProfesionalLEEjemplo-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PractitionerProfesionalLE.html\">Prestador Profesional LE</a></p></div><p><b>identifier</b>: Rol Único Nacional/90000000-6\u00a0(use:\u00a0official,\u00a0), Registro Nacional de Prestadores Individuales/9999999\u00a0(use:\u00a0secondary,\u00a0)</p><p><b>active</b>: true</p><p><b>name</b>: Víctor Gonzalez </p><p><b>address</b>: Dirección falsa 123,depto 1202 null (work)</p><p><b>gender</b>: Male</p><p><b>birthDate</b>: 1980-01-01</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Period</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td>cert</td><td><span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSTituloProfesional 1}\">MÉDICO CIRUJANO</span></td><td>2007-11-01 --&gt; (ongoing)</td><td>Universidad de Chile</td></tr></table></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador",
+                  "code": "01",
+                  "display": "RUN"
+                }
+              ],
+              "text": "Rol Único Nacional"
+            },
+            "value": "90000000-6",
+            "assigner": {
+              "display": "Republica de Chile"
+            }
+          },
+          {
+            "use": "secondary",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador",
+                  "code": "13",
+                  "display": "RNPI"
+                }
+              ],
+              "text": "Registro Nacional de Prestadores Individuales"
+            },
+            "value": "9999999",
+            "assigner": {
+              "display": "Intendencia de prestadores individuales - Superintendencia de Salud"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Gonzalez",
+            "_family": {
+              "extension": [
+                {
+                  "url": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/SegundoApellido",
+                  "valueString": "Torres"
+                }
+              ]
+            },
+            "given": ["Víctor"],
+            "prefix": ["Dr"]
+          }
+        ],
+        "address": [
+          {
+            "use": "work",
+            "line": ["Dirección falsa 123,depto 1202"],
+            "_state": {
+              "extension": [
+                {
+                  "url": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL",
+                        "code": "13",
+                        "display": "Metropolitana de Santiago"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1980-01-01",
+        "qualification": [
+          {
+            "identifier": [
+              {
+                "value": "cert"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSTituloProfesional",
+                  "code": "1",
+                  "display": "MÉDICO CIRUJANO"
+                }
+              ],
+              "text": "MÉDICO CIRUJANO"
+            },
+            "period": {
+              "start": "2007-11-01"
+            },
+            "issuer": {
+              "display": "Universidad de Chile"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/PractitionerRole/PractitionerRoleReferenciador",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "PractitionerRoleReferenciador",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/PractitionerRoleLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_PractitionerRoleReferenciador\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole PractitionerRoleReferenciador</b></p><a name=\"PractitionerRoleReferenciador\"> </a><a name=\"hcPractitionerRoleReferenciador\"> </a><a name=\"PractitionerRoleReferenciador-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PractitionerRoleLE.html\">PractitionerRole LE</a></p></div><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-PractitionerProfesionalLEEjemplo.html\">Practitioner Víctor Gonzalez </a></p><p><b>organization</b>: <a href=\"Bundle-BundleReferenciarEjemplo.html#Organization_OrganizationLEReferenciar\">Bundle: type = message; timestamp = 2024-01-18 16:00:00-0300</a></p><p><b>code</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSPractitionerTipoRolLE referenciador}\">Referenciador</span></p></div>"
+        },
+        "active": true,
+        "practitioner": {
+          "reference": "Practitioner/PractitionerProfesionalLEEjemplo"
+        },
+        "organization": {
+          "reference": "Organization/OrganizationLEReferenciar"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSPractitionerTipoRolLE",
+                "code": "referenciador",
+                "display": "Referenciador"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/PractitionerRole/PractitionerRoleAtendedor1",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "PractitionerRoleAtendedor1",
+        "meta": {
+          "versionId": "1.0",
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/PractitionerRoleLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_PractitionerRoleAtendedor1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole PractitionerRoleAtendedor1</b></p><a name=\"PractitionerRoleAtendedor1\"> </a><a name=\"hcPractitionerRoleAtendedor1\"> </a><a name=\"PractitionerRoleAtendedor1-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1.0</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PractitionerRoleLE.html\">PractitionerRole LE</a></p></div><p><b>active</b>: true</p><p><b>organization</b>: <a href=\"Organization-OrganizationLEAtendedor.html\">Organization Centro de Referencia de Salud Miraflores</a></p><p><b>code</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSPractitionerTipoRolLE atendedor}\">Atendedor</span></p></div>"
+        },
+        "active": true,
+        "organization": {
+          "reference": "Organization/OrganizationLEAtendedor"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSPractitionerTipoRolLE",
+                "code": "atendedor",
+                "display": "Atendedor"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/Organization/OrganizationLEReferenciar",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "OrganizationLEReferenciar",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/OrganizationLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_OrganizationLEReferenciar\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization OrganizationLEReferenciar</b></p><a name=\"OrganizationLEReferenciar\"> </a><a name=\"hcOrganizationLEReferenciar\"> </a><a name=\"OrganizationLEReferenciar-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-OrganizationLE.html\">Organization LE</a></p></div><p><b>identifier</b>: <code>https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEstablecimientoDestino</code>/120101</p><p><b>name</b>: Complejo Asistencial Dr. Víctor Ríos Ruiz (Los Ángeles)</p><p><b>alias</b>: Hospital de Los Ángeles</p><p><b>telecom</b>: ph: (+56) 432336000</p><p><b>address</b>: Ricardo Vicuña 147 Los Ángeles 4451055 Chile </p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEstablecimientoDestino",
+            "value": "120101"
+          }
+        ],
+        "name": "Complejo Asistencial Dr. Víctor Ríos Ruiz (Los Ángeles)",
+        "alias": ["Hospital de Los Ángeles"],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(+56) 432336000"
+          }
+        ],
+        "address": [
+          {
+            "line": ["Ricardo Vicuña 147"],
+            "city": "Los Ángeles",
+            "_city": {
+              "extension": [
+                {
+                  "url": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodComunasCL",
+                        "code": "08301",
+                        "display": "Los Ángeles"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "postalCode": "4451055",
+            "country": "Chile",
+            "_country": {
+              "extension": [
+                {
+                  "url": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais",
+                        "code": "152",
+                        "display": "Chile"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/Organization/OrganizationLEAtendedor",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "OrganizationLEAtendedor",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/OrganizationLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_OrganizationLEAtendedor\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization OrganizationLEAtendedor</b></p><a name=\"OrganizationLEAtendedor\"> </a><a name=\"hcOrganizationLEAtendedor\"> </a><a name=\"OrganizationLEAtendedor-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-OrganizationLE.html\">Organization LE</a></p></div><p><b>identifier</b>: <code>https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEstablecimientoDestino</code>/121343</p><p><b>name</b>: Centro de Referencia de Salud Miraflores</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEstablecimientoDestino",
+            "value": "121343"
+          }
+        ],
+        "name": "Centro de Referencia de Salud Miraflores"
+      }
+    }
+  ]
+}

@@ -1,0 +1,802 @@
+{
+  "resourceType": "Bundle",
+  "id": "BundleAtenderEjemplo",
+  "meta": {
+    "profile": [
+      "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/BundleAtenderLE"
+    ]
+  },
+  "type": "message",
+  "timestamp": "2024-02-22T08:30:00-03:00",
+  "entry": [
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/MessageHeader/MesssageHeaderAtender",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "id": "MesssageHeaderAtender",
+        "meta": {
+          "lastUpdated": "2024-02-22T08:30:00-03:00",
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/MessageHeaderLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_MesssageHeaderAtender\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader MesssageHeaderAtender</b></p><a name=\"MesssageHeaderAtender\"> </a><a name=\"hcMesssageHeaderAtender\"> </a><a name=\"MesssageHeaderAtender-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-22 08:30:00-0300</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MessageHeaderLE.html\">MessageHeader LE</a></p></div><p><b>event</b>: <a href=\"CodeSystem-CSTipoEventoLE.html#CSTipoEventoLE-atender\">Tipo de Evento atender</a>: Atender</p><p><b>author</b>: <a href=\"PractitionerRole-PractitionerRoleAtendedor.html\">PractitionerRole Atendedor</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Software</b></td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td>SISMaule</td><td>llp:10.11.12.13:5432</td></tr></table><p><b>focus</b>: </p><ul><li><a href=\"Bundle-BundleAtenderEjemplo.html#ServiceRequest_SolicitudInterconsultaEjemplo6\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></li><li><a href=\"Bundle-BundleAtenderEjemplo.html#Encounter_Atencion\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></li></ul></div>"
+        },
+        "eventCoding": {
+          "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSTipoEventoLE",
+          "code": "atender",
+          "display": "Atender"
+        },
+        "author": {
+          "reference": "PractitionerRole/PractitionerRoleAtendedor"
+        },
+        "source": {
+          "software": "SISMaule",
+          "endpoint": "llp:10.11.12.13:5432"
+        },
+        "focus": [
+          {
+            "reference": "ServiceRequest/SolicitudInterconsultaEjemplo6"
+          },
+          {
+            "reference": "Encounter/Atencion"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/ServiceRequest/SolicitudInterconsultaEjemplo6",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "SolicitudInterconsultaEjemplo6",
+        "meta": {
+          "versionId": "6.0",
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ServiceRequestLE"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_SolicitudInterconsultaEjemplo6\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest SolicitudInterconsultaEjemplo6</b></p><a name=\"SolicitudInterconsultaEjemplo6\"> </a><a name=\"hcSolicitudInterconsultaEjemplo6\"> </a><a name=\"SolicitudInterconsultaEjemplo6-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 6.0</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ServiceRequestLE.html\">ServiceRequest LE</a></p></div><p><b>ExtBool Requiere Examen</b>: true</p><p><b>ExtBool Atención Preferente</b>: true</p><p><b>ExtBool Resolutividad APS</b>: true</p><p><b>Origen Interconsulta</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSorigenInterconsulta 1}\">APS</span></p><p><b>Extension String Fundamento Priorizacion</b>: Paciente es jefe de hogar y cuidador de adulto mayor.</p><p><b>Estado Interconsulta Codigo</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEstadoInterconsulta 6}\">A la espera de cierre</span></p><p><b>Especialidad Médica Destino Código</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed 30}\">MEDICINA INTERNA</span></p><p><b>SubEspecialidad Médica Destino Código</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed 14}\">ENDOCRINOLOGÍA ADULTO</span></p><blockquote><p><b>Pertinencia Interconsulta</b></p><ul><li>EvaluacionPertinencia: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSPertinenciaInterconsulta 3}\">Pertinente Incompleta</span></li></ul></blockquote><p><b>identifier</b>: 123</p><p><b>status</b>: Draft</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSModalidadAtencionCodigo 1}\">Presencial</span></p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 103696004}\">Interconsulta para atención presencial</span></p><p><b>subject</b>: <a href=\"Patient-EjemploPatientLE.html\">María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>encounter</b>: <a href=\"Encounter-EncounterIniciarEjemplo.html\">Encounter: extension = Derivación; identifier = http://example.org/sampleencounter-identifier#123\u00a0(use:\u00a0official,\u00a0); status = finished; class = Presencial (Modalidad Atencion Codigo#1); period = 2024-01-17 16:00:00+1000 --&gt; 2024-01-17 16:30:00+1000</a></p><p><b>authoredOn</b>: 2024-12-10 09:00:00+0000</p><p><b>requester</b>: <a href=\"PractitionerRole-PractitionerRoleIniciador.html\">PractitionerRole Iniciador</a></p><p><b>performer</b>: <a href=\"PractitionerRole-PractitionerRoleAtendedor.html\">PractitionerRole Atendedor</a></p><p><b>locationCode</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSDestinoReferenciaCodigo 1}\">Nivel Secundario</span></p><p><b>reasonCode</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSDerivadoParaCodigo 1}\">Confirmación</span></p><p><b>supportingInfo</b>: </p><ul><li><a href=\"Condition-ConditionInicialEjemplo.html\">Condition Adrenal antibody detected</a></li><li><a href=\"AllergyIntolerance-AllergyIntoleranceExample.html\">AllergyIntolerance Cashew nuts</a></li><li><a href=\"Observation-IndiceConmorbilidadEjemplo.html\">Observation Estrategia de cuidado integral centrado en las personas</a></li><li><a href=\"Observation-EjemploObservationCuidador.html\">Observation Caregiver for person with age-related complaints, chronic diseases or frailty</a></li><li><a href=\"Observation-EjemploObservationDiscapacidadLE.html\">Observation Disability status</a></li><li><a href=\"QuestionnaireResponse-MotivoDerivacionEjemplo.html\">Response to Questionnaire '-&gt;Motivo de Derivación' about '-&gt;María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))'</a></li><li><a href=\"ServiceRequest-EjemploSolicitudExamen.html\">ServiceRequest Prostate specific Ag [Mass/volume] in Serum or Plasma</a></li><li><a href=\"Observation-AnticuerpoAdrenal.html\">Observation Adrenal Ab [Units/volume] in Serum</a></li></ul></div>"
+        },
+        "extension": [
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionBoolRequiereExamen",
+            "valueBoolean": true
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionBoolAtencionPreferente",
+            "valueBoolean": true
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionBoolResolutividadAPS",
+            "valueBoolean": true
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionOrigenInterconsulta",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSorigenInterconsulta",
+                  "code": "1",
+                  "display": "APS"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionStringFundamentoPriorizacion",
+            "valueString": "Paciente es jefe de hogar y cuidador de adulto mayor."
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionEstadoInterconsultaCodigoLE",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEstadoInterconsulta",
+                  "code": "6",
+                  "display": "A la espera de cierre"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionEspecialidadMedicaDestinoCodigo",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed",
+                  "code": "30",
+                  "display": "MEDICINA INTERNA"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionSubEspecialidadMedicaDestinoCodigo",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed",
+                  "code": "14",
+                  "display": "ENDOCRINOLOGÍA ADULTO"
+                }
+              ]
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "EvaluacionPertinencia",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSPertinenciaInterconsulta",
+                      "code": "3",
+                      "display": "Pertinente Incompleta"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionPertinenciaInterconsulta"
+          }
+        ],
+        "identifier": [
+          {
+            "value": "123"
+          }
+        ],
+        "status": "draft",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSModalidadAtencionCodigo",
+                "code": "1",
+                "display": "Presencial"
+              }
+            ]
+          }
+        ],
+        "priority": "routine",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "103696004"
+            }
+          ],
+          "text": "Interconsulta para atención presencial"
+        },
+        "subject": {
+          "reference": "Patient/EjemploPatientLE"
+        },
+        "encounter": {
+          "reference": "Encounter/EncounterIniciarEjemplo"
+        },
+        "authoredOn": "2024-12-10T09:00:00Z",
+        "requester": {
+          "reference": "PractitionerRole/PractitionerRoleIniciador"
+        },
+        "performer": [
+          {
+            "reference": "PractitionerRole/PractitionerRoleAtendedor"
+          }
+        ],
+        "locationCode": [
+          {
+            "coding": [
+              {
+                "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSDestinoReferenciaCodigo",
+                "code": "1",
+                "display": "Nivel Secundario"
+              }
+            ]
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSDerivadoParaCodigo",
+                "code": "1",
+                "display": "Confirmación"
+              }
+            ]
+          }
+        ],
+        "supportingInfo": [
+          {
+            "reference": "Condition/ConditionInicialEjemplo"
+          },
+          {
+            "reference": "AllergyIntolerance/AllergyIntoleranceExample"
+          },
+          {
+            "reference": "Observation/IndiceConmorbilidadEjemplo"
+          },
+          {
+            "reference": "Observation/EjemploObservationCuidador"
+          },
+          {
+            "reference": "Observation/EjemploObservationDiscapacidadLE"
+          },
+          {
+            "reference": "QuestionnaireResponse/MotivoDerivacionEjemplo"
+          },
+          {
+            "reference": "ServiceRequest/EjemploSolicitudExamen"
+          },
+          {
+            "reference": "Observation/AnticuerpoAdrenal"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/Practitioner/PractitionerProfesionalLEAtendedor",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "PractitionerProfesionalLEAtendedor",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/PractitionerProfesionalLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_PractitionerProfesionalLEAtendedor\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner PractitionerProfesionalLEAtendedor</b></p><a name=\"PractitionerProfesionalLEAtendedor\"> </a><a name=\"hcPractitionerProfesionalLEAtendedor\"> </a><a name=\"PractitionerProfesionalLEAtendedor-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PractitionerProfesionalLE.html\">Prestador Profesional LE</a></p></div><p><b>identifier</b>: Rol Único Nacional/19949350-7\u00a0(use:\u00a0official,\u00a0), Registro Nacional de Prestadores Individuales/1234543\u00a0(use:\u00a0secondary,\u00a0)</p><p><b>active</b>: true</p><p><b>name</b>: Gonzalo Gonzalez </p><p><b>gender</b>: Male</p><p><b>birthDate</b>: 1980-01-01</p><blockquote><p><b>qualification</b></p><p><b>identifier</b>: cert</p><p><b>code</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSTituloProfesional 1}\">MÉDICO CIRUJANO</span></p><p><b>period</b>: 2007-11-01 --&gt; (ongoing)</p><p><b>issuer</b>: Universidad de Chile</p></blockquote><blockquote><p><b>qualification</b></p><p><b>identifier</b>: esp</p><p><b>code</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed 30}\">MEDICINA INTERNA</span></p><p><b>period</b>: 2010-11-01 --&gt; (ongoing)</p><p><b>issuer</b>: Pontificia Universidad Católica de Chile</p></blockquote><blockquote><p><b>qualification</b></p><p><b>identifier</b>: subesp</p><p><b>code</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed 14}\">ENDOCRINOLOGÍA ADULTO</span></p><p><b>period</b>: 2014-11-01 --&gt; (ongoing)</p><p><b>issuer</b>: Universidad de Valparaíso</p></blockquote></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador",
+                  "code": "01",
+                  "display": "RUN"
+                }
+              ],
+              "text": "Rol Único Nacional"
+            },
+            "value": "19949350-7",
+            "assigner": {
+              "display": "Republica de Chile"
+            }
+          },
+          {
+            "use": "secondary",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador",
+                  "code": "13",
+                  "display": "RNPI"
+                }
+              ],
+              "text": "Registro Nacional de Prestadores Individuales"
+            },
+            "value": "1234543",
+            "assigner": {
+              "display": "Intendencia de prestadores individuales - Superintendencia de Salud"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Gonzalez",
+            "_family": {
+              "extension": [
+                {
+                  "url": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/SegundoApellido",
+                  "valueString": "Gutierrez"
+                }
+              ]
+            },
+            "given": ["Gonzalo"],
+            "prefix": ["Dr"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1980-01-01",
+        "qualification": [
+          {
+            "identifier": [
+              {
+                "value": "cert"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSTituloProfesional",
+                  "code": "1",
+                  "display": "MÉDICO CIRUJANO"
+                }
+              ],
+              "text": "MÉDICO CIRUJANO"
+            },
+            "period": {
+              "start": "2007-11-01"
+            },
+            "issuer": {
+              "display": "Universidad de Chile"
+            }
+          },
+          {
+            "identifier": [
+              {
+                "value": "esp"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed",
+                  "code": "30",
+                  "display": "MEDICINA INTERNA"
+                }
+              ],
+              "text": "MEDICINA INTERNA"
+            },
+            "period": {
+              "start": "2010-11-01"
+            },
+            "issuer": {
+              "display": "Pontificia Universidad Católica de Chile"
+            }
+          },
+          {
+            "identifier": [
+              {
+                "value": "subesp"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEspecialidadMed",
+                  "code": "14",
+                  "display": "ENDOCRINOLOGÍA ADULTO"
+                }
+              ],
+              "text": "ENDOCRINOLOGÍA ADULTO"
+            },
+            "period": {
+              "start": "2014-11-01"
+            },
+            "issuer": {
+              "display": "Universidad de Valparaíso"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/PractitionerRole/PractitionerRoleAtendedor",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "PractitionerRoleAtendedor",
+        "meta": {
+          "versionId": "2.0",
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/PractitionerRoleLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_PractitionerRoleAtendedor\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole PractitionerRoleAtendedor</b></p><a name=\"PractitionerRoleAtendedor\"> </a><a name=\"hcPractitionerRoleAtendedor\"> </a><a name=\"PractitionerRoleAtendedor-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 2.0</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PractitionerRoleLE.html\">PractitionerRole LE</a></p></div><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-PractitionerProfesionalLEAtendedor.html\">Practitioner Gonzalo Gonzalez </a></p><p><b>organization</b>: <a href=\"Organization-OrganizationLEAtendedor.html\">Organization Centro de Referencia de Salud Miraflores</a></p><p><b>code</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSPractitionerTipoRolLE atendedor}\">Atendedor</span></p></div>"
+        },
+        "active": true,
+        "practitioner": {
+          "reference": "Practitioner/PractitionerProfesionalLEAtendedor"
+        },
+        "organization": {
+          "reference": "Organization/OrganizationLEAtendedor"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSPractitionerTipoRolLE",
+                "code": "atendedor",
+                "display": "Atendedor"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/Organization/OrganizationLEAtendedor",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "OrganizationLEAtendedor",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/OrganizationLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_OrganizationLEAtendedor\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization OrganizationLEAtendedor</b></p><a name=\"OrganizationLEAtendedor\"> </a><a name=\"hcOrganizationLEAtendedor\"> </a><a name=\"OrganizationLEAtendedor-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-OrganizationLE.html\">Organization LE</a></p></div><p><b>identifier</b>: <code>https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEstablecimientoDestino</code>/121343</p><p><b>name</b>: Centro de Referencia de Salud Miraflores</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSEstablecimientoDestino",
+            "value": "121343"
+          }
+        ],
+        "name": "Centro de Referencia de Salud Miraflores"
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/Encounter/Atencion",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Atencion",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/EncounterAtenderLE"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_Atencion\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter Atencion</b></p><a name=\"Atencion\"> </a><a name=\"hcAtencion\"> </a><a name=\"Atencion-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-EncounterAtenderLE.html\">Encounter Atender LE</a></p></div><p><b>ExtBool Pertinencia Atencion Box</b>: true</p><p><b>identifier</b>: 123</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"CodeSystem-CSModalidadAtencionCodigo.html#CSModalidadAtencionCodigo-1\">Modalidad Atencion Codigo 1</a>: Presencial</p><p><b>type</b>: <span title=\"Codes:{https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSTipoConsulta 1}\">Nueva</span></p><p><b>subject</b>: <a href=\"Patient-EjemploPatientLE.html\">María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>basedOn</b>: <a href=\"Bundle-BundleAtenderEjemplo.html#ServiceRequest_SolicitudInterconsultaEjemplo6\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"PractitionerRole-PractitionerRoleAtendedor.html\">PractitionerRole Atendedor</a></td></tr></table><p><b>period</b>: 2024-02-22 08:00:00-0300 --&gt; 2024-02-22 08:30:00-0300</p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Condition</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Bundle-BundleAtenderEjemplo.html#Condition_ConditionAtencion\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></td></tr></table></div>"
+        },
+        "extension": [
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionPertinenciaAtencionBox",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "value": "123"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSModalidadAtencionCodigo",
+          "code": "1",
+          "display": "Presencial"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSTipoConsulta",
+                "code": "1",
+                "display": "Nueva"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/EjemploPatientLE"
+        },
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/SolicitudInterconsultaEjemplo6"
+          }
+        ],
+        "participant": [
+          {
+            "individual": {
+              "reference": "PractitionerRole/PractitionerRoleAtendedor"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-02-22T08:00:00-03:00",
+          "end": "2024-02-22T08:30:00-03:00"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/ConditionAtencion"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/CarePlan/CarePlanAtencion",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "CarePlanAtencion",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/CarePlanAtenderLE"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"CarePlan_CarePlanAtencion\"> </a><p class=\"res-header-id\"><b>Generated Narrative: CarePlan CarePlanAtencion</b></p><a name=\"CarePlanAtencion\"> </a><a name=\"hcCarePlanAtencion\"> </a><a name=\"CarePlanAtencion-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-CarePlanAtenderLE.html\">CarePlan Atender LE</a></p></div><p><b>ExtBool Solicitud Examenes</b>: true</p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>description</b>: Se le dara un tratamiento de prednisona de 500 mg, 2 veces al día por por 1 mes. Pasado ese tiempo debe realizarse un examen de Ab Adrenal después de ver mejorias, se hara control cada mes</p><p><b>subject</b>: <a href=\"Patient-EjemploPatientLE.html\">María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>encounter</b>: <a href=\"Bundle-BundleAtenderEjemplo.html#Encounter_Atencion\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></p><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href=\"Bundle-BundleAtenderEjemplo.html#ServiceRequest_Abadrenal\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href=\"Bundle-BundleAtenderEjemplo.html#MedicationRequest_Prednisona\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></p></blockquote></div>"
+        },
+        "extension": [
+          {
+            "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionSolicitudExamenes",
+            "valueBoolean": true
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "description": "Se le dara un tratamiento de prednisona de 500 mg, 2 veces al día por por 1 mes. Pasado ese tiempo debe realizarse un examen de Ab Adrenal después de ver mejorias, se hara control cada mes",
+        "subject": {
+          "reference": "Patient/EjemploPatientLE"
+        },
+        "encounter": {
+          "reference": "Encounter/Atencion"
+        },
+        "activity": [
+          {
+            "reference": {
+              "reference": "ServiceRequest/Abadrenal"
+            }
+          },
+          {
+            "reference": {
+              "reference": "MedicationRequest/Prednisona"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/Condition/ConditionAtencion",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "ConditionAtencion",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ConditionDiagnosticoLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_ConditionAtencion\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition ConditionAtencion</b></p><a name=\"ConditionAtencion\"> </a><a name=\"hcConditionAtencion\"> </a><a name=\"ConditionAtencion-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ConditionDiagnosticoLE.html\">Condition Diagnostico LE</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Activo</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmado</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Diagnostico del encuentro</span></p><p><b>severity</b>: <span title=\"Codes:{http://snomed.info/sct 24484000}\">Severo</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 24867002}\">insuficiencia adrenal severa</span></p><p><b>subject</b>: <a href=\"Patient-EjemploPatientLE.html\">María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>encounter</b>: <a href=\"Bundle-BundleAtenderEjemplo.html#Encounter_Atencion\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Activo"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmado"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ],
+            "text": "Diagnostico del encuentro"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "24484000",
+              "display": "Severe"
+            }
+          ],
+          "text": "Severo"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "24867002",
+              "display": "Severe adrenal insufficiency"
+            }
+          ],
+          "text": "insuficiencia adrenal severa"
+        },
+        "subject": {
+          "reference": "Patient/EjemploPatientLE"
+        },
+        "encounter": {
+          "reference": "Encounter/Atencion"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/Observation/AntigenoProstatico",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "AntigenoProstatico",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ObservationResultadoExamen"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_AntigenoProstatico\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation AntigenoProstatico</b></p><a name=\"AntigenoProstatico\"> </a><a name=\"hcAntigenoProstatico\"> </a><a name=\"AntigenoProstatico-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ObservationResultadoExamen.html\">Observation Resultado Examen</a></p></div><p><b>status</b>: Registered</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2857-1}\">Antigeno Prostático Específico en Suero o Plasma</span></p><p><b>subject</b>: <a href=\"Patient-EjemploPatientLE.html\">María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>encounter</b>: <a href=\"Bundle-BundleAtenderEjemplo.html#Encounter_Atencion\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></p><p><b>effective</b>: 2024-01-24 08:30:00-0300</p><p><b>value</b>: 3.5 ng/mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeng/mL = 'ng/mL')</span></p></div>"
+        },
+        "status": "registered",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2857-1",
+              "display": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Antigeno Prostático Específico en Suero o Plasma"
+        },
+        "subject": {
+          "reference": "Patient/EjemploPatientLE"
+        },
+        "encounter": {
+          "reference": "Encounter/Atencion"
+        },
+        "effectiveDateTime": "2024-01-24T08:30:00-03:00",
+        "valueQuantity": {
+          "value": 3.5,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/ServiceRequest/Abadrenal",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "Abadrenal",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ServiceRequestExamenLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_Abadrenal\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest Abadrenal</b></p><a name=\"Abadrenal\"> </a><a name=\"hcAbadrenal\"> </a><a name=\"Abadrenal-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ServiceRequestExamenLE.html\">Solicitud de Examen LE</a></p></div><p><b>basedOn</b>: <a href=\"Bundle-BundleAtenderEjemplo.html#ServiceRequest_SolicitudInterconsultaEjemplo6\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></p><p><b>status</b>: Draft</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8059-8}\">Ab adrenal en Sérum</span></p><p><b>subject</b>: <a href=\"Patient-EjemploPatientLE.html\">María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>authoredOn</b>: 2024-02-22 08:30:00-0300</p><p><b>requester</b>: <a href=\"Practitioner-PractitionerProfesionalLEAtendedor.html\">Practitioner Gonzalo Gonzalez </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 24867002}\">insuficiencia adrenal severa</span></p><p><b>note</b>: para dar seguimiento al tratamiento del paciente</p></div>"
+        },
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/SolicitudInterconsultaEjemplo6"
+          }
+        ],
+        "status": "draft",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8059-8"
+            }
+          ],
+          "text": "Ab adrenal en Sérum"
+        },
+        "subject": {
+          "reference": "Patient/EjemploPatientLE"
+        },
+        "authoredOn": "2024-02-22T08:30:00-03:00",
+        "requester": {
+          "reference": "Practitioner/PractitionerProfesionalLEAtendedor"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "24867002",
+                "display": "Severe adrenal insufficiency"
+              }
+            ],
+            "text": "insuficiencia adrenal severa"
+          }
+        ],
+        "note": [
+          {
+            "text": "para dar seguimiento al tratamiento del paciente"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/Observation/Anamnesis",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Anamnesis",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ObservationAnamnesisLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_Anamnesis\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation Anamnesis</b></p><a name=\"Anamnesis\"> </a><a name=\"hcAnamnesis\"> </a><a name=\"Anamnesis-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ObservationAnamnesisLE.html\">Observation Anamnesis LE</a></p></div><p><b>status</b>: Registered</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 84100007}\">Anamnesis</span></p><p><b>subject</b>: <a href=\"Patient-EjemploPatientLE.html\">María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>encounter</b>: <a href=\"Bundle-BundleAtenderEjemplo.html#Encounter_Atencion\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></p><p><b>effective</b>: 2024-01-24 08:30:00-0300</p><p><b>value</b>: A pesar de la severidad de la condición del paciente, se encuentra estable, por lo que, dar un tratamiento más fuerte podría afectar su condición, lo mejor será iniciar con algo lo suficientemente suave. Hay que mantenerlo vigilado.</p></div>"
+        },
+        "status": "registered",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "84100007"
+            }
+          ],
+          "text": "Anamnesis"
+        },
+        "subject": {
+          "reference": "Patient/EjemploPatientLE"
+        },
+        "encounter": {
+          "reference": "Encounter/Atencion"
+        },
+        "effectiveDateTime": "2024-01-24T08:30:00-03:00",
+        "valueString": "A pesar de la severidad de la condición del paciente, se encuentra estable, por lo que, dar un tratamiento más fuerte podría afectar su condición, lo mejor será iniciar con algo lo suficientemente suave. Hay que mantenerlo vigilado."
+      }
+    },
+    {
+      "fullUrl": "http://interoperabilidad.minsal.cl/fhir/ig/tei/MedicationRequest/Prednisona",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "Prednisona",
+        "meta": {
+          "profile": [
+            "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/MedicationRequestLE"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_Prednisona\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest Prednisona</b></p><a name=\"Prednisona\"> </a><a name=\"hcPrednisona\"> </a><a name=\"Prednisona-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedicationRequestLE.html\">Solicitud de Medicamento LE</a></p></div><p><b>status</b>: Draft</p><p><b>intent</b>: Order</p><p><b>medication</b>: <span title=\"Codes:\">Prednisona 5mg</span></p><p><b>subject</b>: <a href=\"Patient-EjemploPatientLE.html\">María Josefina Gonzalez (official) Male, DoB: 1974-12-25 ( Rol Único Nacional:\u00a090000000-6\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>encounter</b>: <a href=\"Bundle-BundleAtenderEjemplo.html#Encounter_Atencion\">Bundle: type = message; timestamp = 2024-02-22 08:30:00-0300</a></p><p><b>requester</b>: <a href=\"Practitioner-PractitionerProfesionalLEAtendedor.html\">Practitioner Gonzalo Gonzalez </a></p><p><b>note</b>: 2 veces al día por 1 mes</p></div>"
+        },
+        "status": "draft",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Prednisona 5mg"
+        },
+        "subject": {
+          "reference": "Patient/EjemploPatientLE"
+        },
+        "encounter": {
+          "reference": "Encounter/Atencion"
+        },
+        "requester": {
+          "reference": "Practitioner/PractitionerProfesionalLEAtendedor"
+        },
+        "note": [
+          {
+            "text": "2 veces al día por 1 mes"
+          }
+        ]
+      }
+    }
+  ]
+}
