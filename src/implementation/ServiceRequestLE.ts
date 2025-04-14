@@ -5,6 +5,8 @@ import { codeSchema } from "../fhir/datatypes/Code";
 import { codeableConceptSchema } from "../fhir/datatypes/CodeableConcept";
 import { metaSchema } from "../fhir/datatypes/Meta";
 import { modalidadAtencionValueSet } from "./ModalidadAtencionValueSet";
+import { referenceSchema } from "../fhir/datatypes/Reference";
+import { dateTimeSchema } from "../fhir/datatypes/DateTime";
 
 export const serviceRequestSchema = z
   .object({
@@ -73,5 +75,10 @@ export const serviceRequestSchema = z
         });
       }
     }),
+    subject: referenceSchema,
+    encounter: referenceSchema,
+    authoredOn: dateTimeSchema,
+    requester: referenceSchema,
+    supportingInfo: z.array(referenceSchema).optional(),
   })
   .strict();

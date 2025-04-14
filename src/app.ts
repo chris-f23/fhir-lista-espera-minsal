@@ -58,4 +58,30 @@ const a = serviceRequestSchema.parse({
   requester: {
     reference: "PractitionerRole/PractitionerRoleIniciador",
   },
+  supportingInfo: [
+    {
+      reference: "Condition/ConditionInicialEjemplo",
+    },
+    {
+      reference: "AllergyIntolerance/AllergyIntoleranceExample",
+    },
+    {
+      reference: "Observation/IndiceConmorbilidadEjemplo",
+    },
+    {
+      reference: "Observation/EjemploObservationCuidador",
+    },
+    {
+      reference: "Observation/EjemploObservationDiscapacidadLE",
+    },
+    {
+      reference: "QuestionnaireResponse/MotivoDerivacionEjemplo",
+    },
+    {
+      reference: "ServiceRequest/SolicitudExamenEjemplo",
+    },
+    {
+      reference: "Observation/AnticuerpoAdrenal",
+    },
+  ],
 });
