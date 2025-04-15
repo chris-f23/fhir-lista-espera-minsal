@@ -1,87 +1,41 @@
-// import { crearBundleIniciar } from "./bundle-iniciar";
-// import { Bundle } from "./resources-old/fhir/Bundle";
-// import { BundleIniciarLE } from "./resources-old/BundleIniciarLE";
+import fs from "fs";
 
 import { serviceRequestSchema } from "./implementation/ServiceRequestLE";
+import { printZodError } from "./print-zod-error";
+import { FHIR } from "./fhir/fhir";
 
-// const bundleIniciar = new BundleIniciarLE({
-//   rolProfesional: { id: "1234" },
-// });
-// console.log(bundleIniciar.toResult());
+const bundleInicio = JSON.parse(
+  fs.readFileSync("./bundles/1.iniciar.json", "utf-8")
+);
 
-const a = serviceRequestSchema.parse({
-  resourceType: "ServiceRequest",
-  id: "SolicitudInterconsultaEjemplo",
-  meta: {
-    profile: [
-      "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ServiceRequestLE",
-    ],
-  },
-  identifier: [
+const serviceRequest = bundleInicio["entry"][1]["resource"];
+
+const fhir = new FHIR();
+const result = serviceRequestSchema(fhir).safeParse({
+  ...serviceRequest,
+  extension: [
+    ...serviceRequest["extension"],
     {
-      value: "123",
-    },
-  ],
-  status: "draft",
-  intent: "order",
-  category: [
-    {
-      coding: [
+      extension: [
         {
-          system:
-            "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSModalidadAtencionCodigo",
-          code: "1",
-          display: "Presencial",
+          url: "EvaluacionPertinencia",
+          valueCodeableConcept: {
+            coding: [
+              {
+                system:
+                  "https://interoperabilidad.minsal.cl/fhir/ig/tei/CodeSystem/CSPertinenciaInterconsulta",
+                code: "3",
+                display: "Pertinente Incompleta",
+              },
+            ],
+          },
         },
       ],
-    },
-  ],
-
-  priority: "routine",
-  code: {
-    coding: [
-      {
-        system: "http://snomed.info/sct",
-        code: "103696004",
-      },
-    ],
-    text: "Interconsulta para atención presencial",
-  },
-
-  subject: {
-    reference: "Patient/EjemploPatientLE",
-  },
-  encounter: {
-    reference: "Encounter/EncounterIniciarEjemplo",
-  },
-  authoredOn: "2024-12-10T09:00:00Z",
-  requester: {
-    reference: "PractitionerRole/PractitionerRoleIniciador",
-  },
-  supportingInfo: [
-    {
-      reference: "Condition/ConditionInicialEjemplo",
-    },
-    {
-      reference: "AllergyIntolerance/AllergyIntoleranceExample",
-    },
-    {
-      reference: "Observation/IndiceConmorbilidadEjemplo",
-    },
-    {
-      reference: "Observation/EjemploObservationCuidador",
-    },
-    {
-      reference: "Observation/EjemploObservationDiscapacidadLE",
-    },
-    {
-      reference: "QuestionnaireResponse/MotivoDerivacionEjemplo",
-    },
-    {
-      reference: "ServiceRequest/SolicitudExamenEjemplo",
-    },
-    {
-      reference: "Observation/AnticuerpoAdrenal",
+      url: "https://interoperabilidad.minsal.cl/fhir/ig/tei/StructureDefinition/ExtensionPertinenciaInterconsulta",
     },
   ],
 });
+
+if (result.error) {
+  printZodError(result.error);
+}
